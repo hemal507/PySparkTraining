@@ -1,0 +1,100 @@
+159.65.33.241
+167.71.110.150
+
+167.71.110.150:50070
+
+
+AALEARN2
+
+java -cp  <<jar>> com.patel.kafka.produce.standaPro topic
+java -cp  <<jar>> com.patel.kafka.produce.standaCon topic
+
+
+properties -> partitioner.class will hold the custom partitioner
+
+
+bin/kafka-topics.sh --z
+
+
+https://drive.google.com/drive/folders/14uf0OukD-6QeM_o9XtU3LYsJcropHFsV
+
+
+
+
+
+//Copy jar to the Kafka cluster machine.
+//Start Kafka and Zookeeper
+//Start Producer in a terminal
+java -cp Kafka-Lab-1.0-SNAPSHOT-jar-with-dependencies.jar com.jpatel.kafka.producer.StandaloneProducer one
+
+//Start Consumer in another terminal
+java -cp Kafka-Lab-1.0-SNAPSHOT-jar-with-dependencies.jar com.jpatel.kafka.consumer.StandaloneConsumer one
+
+
+
+partitioner-topic
+
+java -cp Kafka-Lab-1.0-SNAPSHOT-jar-with-dependencies.jar com.jpatel.kafka.producer.CustomProducer partitioner-topic
+
+java -cp Kafka-Lab-1.0-SNAPSHOT-jar-with-dependencies.jar com.jpatel.kafka.producer.CustomConsumer one
+
+
+
+metircs of the producer :-
+ 
+{'producer-topic-metrics.one': {'byte-rate': 14.362717971181475, 'record-send-rate': 0.3332416023990792, 'record-retry-rate': 0.0, 'compression-rate': 1.0, 'record-error-rate': 0.0}, 'producer-node-metrics.node-0': {'incoming-byte-rate': 1.5664334735715164, 'request-size-max': 497.0, 'request-latency-avg': 6.2389373779296875, 'response-rate': 0.03333004779566285, 'request-size-avg': 124.25, 'outgoing-byte-rate': 16.560631362356208, 'request-latency-max': 6.2389373779296875, 'request-rate': 0.13327943043738244}, 'producer-metrics': {'record-send-rate': 0.33322211286021447, 'request-size-max': 497.0, 'record-retry-rate': 0.0, 'network-io-rate': 0.46371114211575587, 'requests-in-flight': 0.0, 'request-rate': 0.33120789668196077, 'records-per-request-avg': 10.0, 'compression-rate-avg': 1.0, 'connection-close-rate': 0.033319216050907596, 'response-rate': 0.13294128960012802, 'batch-size-max': 431.0, 'select-rate': 0.23278431055180704, 'produce-throttle-time-max': 0.0, 'connection-creation-rate': 0.06624609025149966, 'connection-count': 1.0, 'request-size-avg': 61.6, 'io-ratio': 0.00037765546736505715, 'batch-size-avg': 431.0, 'io-wait-time-ns-avg': 2369914.736066546, 'record-queue-time-avg': 0.042320966720581055, 'io-time-ns-avg': 1622404.3709891182, 'metadata-age': 0.059822021484375, 'record-error-rate': 0.0, 'outgoing-byte-rate': 20.403348495015546, 'request-latency-max': 103.43003273010254, 'io-wait-ratio': 0.0005516216604285431, 'byte-rate': 14.361861614138343, 'produce-throttle-time-avg': 0.0, 'request-latency-avg': 31.958043575286865, 'record-size-max': 37.0, 'record-queue-time-max': 0.042320966720581055, 'incoming-byte-rate': 104.58783323511845, 'record-size-avg': 37.0, 'bufferpool-wait-ratio': 0.0}, 'producer-node-metrics.node-bootstrap-0': {'response-rate': 0.09969779915972475, 'request-size-max': 41.0, 'request-latency-avg': 40.53107897440592, 'request-size-avg': 19.833333333333332, 'incoming-byte-rate': 103.03098501730712, 'outgoing-byte-rate': 3.9413464027572735, 'request-latency-max': 103.43003273010254, 'request-rate': 0.1987399373653814}, 'kafka-metrics-count': {'count': 56.0}}
+
+
+
+
+
+
+
+sql.jdbc.Driver',url="jdbc:mysql://localhost:3306/test?useSSL=false", dbtable="marks" ,user='myuser',password='Student123@
+
+
+
+
+
+
+
+sudo apt-get update
+wget -qO – http://packages.confluent.io/deb/3.3/archive.key | sudo apt-key add –
+sudo add-apt-repository "deb [arch=amd64] http://packages.confluent.io/deb/3.3 stable main"
+sudo apt-get update
+sudo apt-get install confluent-platform-oss-2.11 -y
+confluent start
+
+
+
+
+
+sudo rpm --import http://packages.confluent.io/rpm/3.1/archive.key
+
+
+
+curl -L https://cnfl.io/cli | sh -s -- -b /usr/local/bin
+
+/usr/local/bin/confluent-hub install --no-prompt confluentinc/kafka-connect-datagen:latest
+
+
+
+
+export JAVA_HOME=/usr/lib/jvm/default-java/
+export SPARK_MASTER_HOST=localhost
+
+
+spark.history.provider  org.apache.spark.deploy.history.FsHistoryProvider
+spark.master    yarn	(change for standalone)
+spark.eventLog.enabled  true
+spark.eventLog.dir      hdfs://localhost:9000/spark-logs
+spark.history.fs.logDirectory   hdfs://localhost:9000/spark-logs
+spark.history.fs.update.interval        10s
+spark.history.ui.port   18080
+
+
+
+hdfs fsck /path/file_name -files -locations -block	=> to list the blocks and replications and data nodes information
+
+
+

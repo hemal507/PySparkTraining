@@ -13,6 +13,8 @@ schema = StructType([StructField("txn_id",      IntegerType(), True),
 df = spark.read.csv(sys.argv[1],schema=schema,header=False)
 df.createOrReplaceTempView("transactions")
 spark.sql("select txn_city, txn_product, max(txn_amt) from transactions group by txn_city, txn_product")    \
-    .coalesce(1).write.mode("overwrite").csv(sys.argv[3])
+     .coalesce(1).write.mode("overwrite").csv(sys.argv[3])
+
+df2.explain()
 
 spark.stop()
